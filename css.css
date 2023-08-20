@@ -1,0 +1,328 @@
+/* ========== RESET STARTS HERE ========== */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a, a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ========== RESET ENDS HERE ========== */
+
+:root {
+    --dark: #353531;
+    --light: #EDF2F4;
+    --hover: #8D99AE;
+    --feature: #D80032;
+}
+
+html, body {
+    scroll-behavior: smooth;
+    font-family: 'Kalam', cursive;
+  }
+
+header img {
+    width: 40px;
+    height: 40px;
+}
+
+main {
+    background-color:var(--light);
+    /* margin-top: 80px; */
+    position: sticky;
+    left: 0;
+    top: 0;
+}
+
+b {
+    font-weight: bold;
+}
+
+hr {
+    border-bottom: 2px solid black;
+}
+
+.nav-bar-container {
+    width: 100%;
+    height: 80px;
+    background-color: transparent;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+}
+
+.nav-bar-floating {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: var(--light);
+    z-index: 999;
+    margin-top: 100vh;
+}
+
+.nav-bar-title {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.nav-bar-title .nav-bar-item {
+    margin: 5px;
+}
+
+.nav-bar-top {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.nav-bar-top li .nav-bar-item {
+    margin: 0 10px 0 10px;
+}
+
+.nav-bar-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--light);
+    border-radius: 10px;
+}
+
+.nav-bar-item:hover {
+    background-color: var(--hover);
+    color: var(--light);
+}
+
+.nav-btn-home::after {
+    content: "Recipies of the Day";
+    display: none;
+    margin: 10px;
+}
+
+.nav-btn-contact::before {
+    content: "Contact Me";
+    display: none;
+    margin: 10px;
+}
+
+.height-min-100vh {
+    min-height: calc(100vh - 80px);
+}
+
+.page-title {
+    background-image: url('images/cooking.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.page-title h1 {
+    font-size: 4em;
+    color: var(--light) ;
+    margin-top: 30vh;
+}
+
+.page-title h2 {
+    font-size: 2em;
+    color: var(--light);
+    margin-bottom: 10px;
+}
+
+.page-recipe {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 120px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+.page-recipe h3 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.page-recipe img {
+    margin: 0 auto 30px auto;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 700px;
+    display: inline-block;
+}
+
+.page-recipe section {
+    margin-bottom: 40px;
+}
+
+.fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.ingredients {
+    order: 1;
+}
+
+.instructions {
+    order: 2;
+}
+
+.instructions::before {
+    content: "Instructions";
+    text-decoration: underline;
+}
+
+.ingredients::before {
+    content: "Ingredients";
+    text-decoration: underline;
+}
+
+.instructions ol {
+    list-style: decimal;
+    margin: 20px 0 20px 30px;
+}
+
+.ingredients ul {
+    list-style: circle;
+    margin: 20px 0 20px 30px;
+}
+
+.ingredients li, .instructions li, .serving-suggestions {
+    line-height: 1.4em;
+}
+
+.serving-suggestions {
+    margin-left: 30px;
+    display: inline-block;
+}
+
+.serving-suggestions::before {
+    content: "Serving Suggestions";
+    display: block;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+@media (min-width: 550px) {
+    .nav-btn-contact::before, .nav-btn-home::after {
+        display: inline;
+    }
+}
+
+
+@media (min-width: 750px) {
+    .nav-bar-title {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .nav-bar-title .nav-bar-item {
+        margin: 15px;
+    }
+
+    .page-title {
+        font-size: 18pt;
+    }
+}
+
+@media (min-width: 1080px) {
+    .page-recipe {
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-content: flex-start;
+    }
+
+    .page-recipe {
+        flex-wrap: wrap;
+    }
+
+    .page-recipe h3 {
+        order: 1;
+        flex-basis: 100%;
+    }
+
+    .page-recipe img {
+        order: 3;
+        width: 100px;
+        height: auto;
+        flex-basis: 500px;
+        object-fit: contain
+    }
+
+    .instructions {
+        order: 2;
+        flex-basis: 50%;
+
+    }
+
+    .ingredients {
+        order: 4;
+        flex-basis: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .page-recipe {
+        width: 1100px;
+        margin: auto;
+    }
+
+    .page-title h1 {
+        margin-top: 40vh;
+    }
+}
